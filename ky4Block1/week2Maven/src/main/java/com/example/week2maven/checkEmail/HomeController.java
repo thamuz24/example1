@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+// 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 git token
 @Controller
 public class HomeController {
     private static final String EMAIL_REGEX = "^[a-zA-z0-9]+[a-zA-Z0-9]*@[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)$";
