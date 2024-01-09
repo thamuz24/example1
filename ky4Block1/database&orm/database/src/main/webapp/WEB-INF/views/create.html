@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/song/save}" th:object="${songForm}"
+          method="post" novalidate="novalidate" enctype="multipart/form-data">
+        <input type="hidden" th:field="*{idSong}"/>
+        <input type="hidden" id="path" th:field="*{path}"/>
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" th:field="*{name}"/></td>
+            </tr>
+            <tr>
+                <td><label for="Author">Author</label></td>
+                <td><input type="text" id="Author" th:field="*{author}"/></td>
+            </tr>
+            <tr>
+                <td><label for="Type">Type</label></td>
+                <td><input type="text" id="Type" th:field="*{type}"/></td>
+            </tr>
+            <tr>
+                <td><label for="song">Image</label></td>
+                <td><input type="file" id="song" th:field="*{song}"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Save"/></td>
+            </tr>
+        </table>
+</body>
+</html>
