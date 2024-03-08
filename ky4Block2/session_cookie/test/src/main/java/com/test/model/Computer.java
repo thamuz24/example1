@@ -20,7 +20,7 @@ public class Computer {
     private String card;
     private String display;
     private int price;
-    private LocalDate dateOfManufacture;
+    private String dateOfManufacture;
     private String status;
     private String detail;
 
@@ -117,10 +117,10 @@ public class Computer {
     }
 
     public String getDateOfManufacture() {
-        return dateOfManufacture.toString();
+        return dateOfManufacture;
     }
 
-    public void setDateOfManufacture(LocalDate dateOfManufacture) {
+    public void setDateOfManufacture(String dateOfManufacture) {
         this.dateOfManufacture = dateOfManufacture;
     }
 
@@ -142,7 +142,7 @@ public class Computer {
 
     public Computer(int id, String name, String brand, String type, String operatingSystem,
                     String cpu, int ram, int rom, String card, String display, int price,
-                    LocalDate dateOfManufacture, String status, String detail) {
+                    String dateOfManufacture, String status, String detail) {
         this.id = id;
         this.name = name;
         this.brand = brand;

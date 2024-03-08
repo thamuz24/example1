@@ -17,8 +17,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/computers")
 public class ComputerController {
-
-
     @Autowired
     private IComputerService iComputerService;
     @Autowired

@@ -17,20 +17,20 @@ public class Employee {
     private String fullName;
     private String gender;
     private String address;
-    private LocalDate birth;
+    private String birth;
     private String phoneNumber;
     private String email;
     private String  department;
     private String roll;
     private long wage;
-    private LocalDate day_start;
+    private String day_start;
     private String status;
     private String insurance_information;
 
     public Employee(
-            int age, String fullName, String gender, String address, LocalDate birth,
+            int age, String fullName, String gender, String address, String birth,
             String phoneNumber, String email, String department, String roll, long wage,
-            LocalDate day_start, String status, String insurance_information) {
+            String day_start, String status, String insurance_information) {
         this.age = age;
         this.fullName = fullName;
         this.gender = gender;
@@ -90,10 +90,10 @@ public class Employee {
     }
 
     public String getBirth() {
-        return birth.toString();
+        return birth;
     }
 
-    public void setBirth(LocalDate birth) {
+    public void setBirth(String birth) {
         this.birth = birth;
     }
 
@@ -138,10 +138,10 @@ public class Employee {
     }
 
     public String getDay_start() {
-        return day_start.toString();
+        return day_start;
     }
 
-    public void setDay_start(LocalDate day_start) {
+    public void setDay_start(String day_start) {
         this.day_start = day_start;
     }
 
