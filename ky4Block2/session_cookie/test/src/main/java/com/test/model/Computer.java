@@ -2,13 +2,14 @@ package com.test.model;
 
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name =  "computer")
 public class Computer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private String name;
     private String brand;
     private String type;
@@ -19,7 +20,7 @@ public class Computer {
     private String card;
     private String display;
     private int price;
-    private String dateOfManufacture;
+    private LocalDate dateOfManufacture;
     private String status;
     private String detail;
 
@@ -27,11 +28,11 @@ public class Computer {
 
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -116,10 +117,10 @@ public class Computer {
     }
 
     public String getDateOfManufacture() {
-        return dateOfManufacture;
+        return dateOfManufacture.toString();
     }
 
-    public void setDateOfManufacture(String dateOfManufacture) {
+    public void setDateOfManufacture(LocalDate dateOfManufacture) {
         this.dateOfManufacture = dateOfManufacture;
     }
 
@@ -139,7 +140,9 @@ public class Computer {
         this.detail = detail;
     }
 
-    public Computer(int id, String name, String brand, String type, String operatingSystem, String cpu, int ram, int rom, String card, String display, int price, String dateOfManufacture, String status, String detail) {
+    public Computer(int id, String name, String brand, String type, String operatingSystem,
+                    String cpu, int ram, int rom, String card, String display, int price,
+                    LocalDate dateOfManufacture, String status, String detail) {
         this.id = id;
         this.name = name;
         this.brand = brand;
